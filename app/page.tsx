@@ -1,4 +1,5 @@
 import CopyrightHeadng from "./components/CopyrightHeading";
+import HelpText from "./components/HelpText";
 import Input from "./components/Input";
 import MorseClosing from "./components/MorseEnding";
 import MorseOpening from "./components/MorseOpening";
@@ -7,7 +8,7 @@ import WelcomeArt from "./components/WelcomeArt";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen min-w-[700px] flex-col items-start justify-start p-4 text-stone-300 font-mono gap-2 tracking-widest border-4 border-double border-stone-400 outline-dashed outline-stone-400 -outline-offset-8">
+    <main className="flex min-h-screen min-w-[700px] flex-col items-start justify-start p-4 text-cyan-600 font-mono gap-2 tracking-widest border-4 border-double border-stone-400 outline-dashed outline-stone-400 -outline-offset-8">
       <div className="flex flex-row text-stone-400 text-xs">
         <MorseOpening />
       </div>
@@ -19,6 +20,9 @@ export default function Home() {
       </div>
       <div className="flex flex-row text-stone-400 text-xs">
         <MorseClosing />
+      </div>
+      <div className="flex flex-row">
+        <HelpText />
       </div>
       <div className="flex flex-row">
         <Prefix />
