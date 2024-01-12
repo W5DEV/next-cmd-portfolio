@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        caret: "pulse 1s linear infinite",
+      },
       textShadow: {
         xs: "0 0 46px var(--tw-shadow-color)",
         sm: "0 0 8px var(--tw-shadow-color)",

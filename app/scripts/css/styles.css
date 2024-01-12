@@ -1,10 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@charset "utf-8";
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-body {
-    @apply bg-stone-800 overflow-x-hidden;
-}
+@namespace url(http://www.w3.org/1999/xhtml); /* set default namespace to HTML */
 
 *|*:root {
   color-scheme: light dark;
