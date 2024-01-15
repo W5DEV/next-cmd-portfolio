@@ -46,109 +46,109 @@ export const birminghamAirport = {
   type: "Professional",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["Gatsby", "GraphQL", "TailwindCSS", "WordPress API"],
 };
 
 export const youDotCom = {
-  name: "Birmingham Airport",
+  name: "You.com",
   type: "Professional",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["NextJS"],
 };
 
 export const agerpoint = {
-  name: "Birmingham Airport",
+  name: "Agerpoint",
   type: "Professional",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["React", "OpenLayers"],
 };
 
 export const incFile = {
-  name: "Birmingham Airport",
+  name: "IncFile",
   type: "Professional",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["VueJS", "TailwindCSS"],
 };
 
 export const devRev = {
-  name: "Birmingham Airport",
+  name: "DevRev",
   type: "Professional",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["React", "TailwindCSS", "Storybook"],
 };
 
 export const recipeVaultOnline = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "Recipe Vault Online",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["VueJS", "TailwindCSS", "Supabase"],
 };
 
 export const recipeVaultOnlinev2 = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "NextJS Online Cookbook (WIP)",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["NextJS", "TailwindCSS"],
 };
 
 export const recipeApi = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "NestJS Recipe API",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["NestJS", "Prisma"],
 };
 
 export const greatIdeaMediaPlatform = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "Great Idea Media Platform (WIP)",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["NextJS", "TailwindCSS"],
 };
 
 export const myBudgetBuddy = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "My Budget Buddy (WIP)",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["Kotlin"],
 };
 
 export const portfolioV1 = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "VueJS Portfolio",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["VueJS", "TailwindCSS"],
 };
 
 export const terminaPortfolio = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "NextJS Terminal Portfolio (W5DEV Terminal)",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["NextJS", "TailwindCSS"],
 };
 
 export const amazonClone = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "Amazon Clone",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["HTML", "Javascript", "TailwindCSS", "Firebase"],
 };
 
 export const ktorMediaApi = {
-  name: "Birmingham Airport",
-  type: "Professional",
+  name: "Ktor RESTful API (WIP)",
+  type: "Personal",
   description: "Put a description here dummy",
   github: null,
-  tech: ["Gatsby", "GraphQL", "TailwindCSS"],
+  tech: ["Kotlin", "Ktor"],
 };
