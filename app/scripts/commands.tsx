@@ -149,8 +149,7 @@ export const help = (
         resume
       </span>
       <span className="text-nowrap clamp-1 truncate">
-        Download my resume (Opens in new tab. You <i>may</i> need to allow
-        pop-ups)
+        Download my resume (You <i>may</i> need to allow pop-ups)
       </span>
     </div>
     <div className="flex flex-row justify-between items-center">
