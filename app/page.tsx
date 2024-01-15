@@ -318,6 +318,22 @@ export default function Home() {
           ]);
           break;
 
+        case "resume":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          window.open("./john-larson-resume.pdf");
+          break;
+
         case "secret":
           setHistory([
             ...history,

@@ -146,6 +146,12 @@ export const help = (
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        resume
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Download my resume</span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         secret
       </span>{" "}
       <span className="text-nowrap clamp-1 truncate">Find the password</span>
