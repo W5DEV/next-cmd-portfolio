@@ -1,21 +1,19 @@
 "use client";
 
+import type { IProject } from "./scripts/projects";
 import { ReactNode, useEffect, useRef, useState } from "react";
-import CopyrightHeadng from "./components/CopyrightHeading";
+import CopyrightHeading from "./components/CopyrightHeading";
 import HelpText from "./components/HelpText";
 import Input from "./components/Input";
 import MorseClosing from "./components/MorseEnding";
 import MorseOpening from "./components/MorseOpening";
 import Prefix from "./components/Prefix";
 import WelcomeArt from "./components/WelcomeArt";
-import {
-  whois,
-  whoami,
-  social,
-  secret,
-  projects,
-  help,
-} from "./scripts/commands";
+import { whois, whoami, social, secret, help } from "./scripts/commands";
+import * as Projects from "./scripts/projects";
+interface IProjects {
+  [key: string]: IProject;
+}
 
 export default function Home() {
   const [history, setHistory] = useState<ReactNode[]>([]);
@@ -23,17 +21,53 @@ export default function Home() {
   const [inputValue, setInputValue] = useState<string>("");
   const [password, setPassword] = useState<boolean>(false);
   const [cmdHistory, setCmdHistory] = useState<ReactNode[]>([]);
+  const [throwError, setThrowError] = useState<boolean>(false);
+  const [projectSelectionMode, setProjectSelectionMode] =
+    useState<boolean>(false);
   const inputRef = useRef(null);
   const toggleEditing = () => {
     setEditing(!isEditing);
   };
 
+  const getProject = (name: string) => {
+    const projects: IProjects = Projects;
+    let selectedProject: IProject | undefined;
+    Object.values(projects).map((project) => {
+      if (project.name.toLowerCase() === name) {
+        selectedProject = project;
+      }
+    });
+    return selectedProject;
+  };
+
+  const getProjectNames = () => {
+    const projects: IProjects = Projects;
+    const projectNames = Object.keys(projects).map((key) => {
+      return (
+        <div
+          className="flex flex-row justify-start items-center"
+          key={Math.random()}
+        >
+          <span className="w-96" key={Math.random()}>
+            {projects[key].name}
+          </span>
+          <span key={Math.random()}>{projects[key].primaryTech}</span>
+        </div>
+      );
+    });
+    return projectNames;
+  };
+
   const addHistory = (command: string) => {
-    console.log(password, command);
     setInputValue("");
 
-    if (password) {
-      if (command.toLowerCase() === "w5devpw") {
+    if (command.toLowerCase() === "clear") {
+      setHistory([]);
+      setCmdHistory([]);
+      setProjectSelectionMode(false);
+      setPassword(false);
+    } else if (password) {
+      if (command === "w5devpw") {
         setHistory([
           ...history,
           <div
@@ -63,6 +97,82 @@ export default function Home() {
           </div>,
         ]);
       }
+    } else if (projectSelectionMode) {
+      const selectedProject = getProject(command.toLowerCase());
+      if (selectedProject) {
+        setHistory([
+          ...history,
+          <div
+            className="flex flex-col items-start justify-center"
+            key={Math.random()}
+          >
+            <div className="w-full flex flex-row justify-start items-center">
+              <Prefix />
+              <span className="">Project: {command}</span>
+            </div>
+            <div className="p-4">
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48">Name:</span>
+                <span>{selectedProject.name}</span>
+              </div>
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48">Primary Tech:</span>
+                <span>{selectedProject.primaryTech}</span>
+              </div>
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48">Type:</span>
+                <span>{selectedProject.type}</span>
+              </div>
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48">Status:</span>
+                <span>{selectedProject.status}</span>
+              </div>
+              {selectedProject.github && (
+                <div className="flex flex-row justify-start items-center">
+                  <span className="w-48">Github</span>
+                  <span>{selectedProject.primaryTech}</span>
+                </div>
+              )}
+              <div className="flex flex-row justify-start items-start">
+                <span className="w-48">Tech:</span>
+                <div>
+                  {selectedProject.tech.map((tech) => {
+                    return (
+                      <span
+                        className="flex flex-row justify-start items-center"
+                        key={Math.random()}
+                      >
+                        {tech}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex flex-col justify-start items-start">
+                <span className="w-48 pb-2">Description:</span>
+                <div className="pl-8">{selectedProject.description}</div>
+              </div>
+            </div>
+          </div>,
+        ]);
+        setProjectSelectionMode(false);
+      } else {
+        setHistory([
+          ...history,
+          <div
+            className="flex flex-col items-start justify-center"
+            key={Math.random()}
+          >
+            <div className="w-full flex flex-row justify-start items-center">
+              <Prefix />
+              <span className="">Project: {command}</span>
+            </div>
+            <div className="p-4  font-normal text-yellow-600">
+              Project name invalid! Please try again.
+            </div>
+          </div>,
+        ]);
+      }
     } else {
       switch (command.toLowerCase()) {
         case "banner":
@@ -79,11 +189,6 @@ export default function Home() {
               <WelcomeArt />
             </div>,
           ]);
-          break;
-
-        case "clear":
-          setHistory([]);
-          setCmdHistory([]);
           break;
 
         case "email":
@@ -172,7 +277,7 @@ export default function Home() {
           }, 1000);
           break;
 
-        case "projects":
+        case "please sudo":
           setHistory([
             ...history,
             <div
@@ -183,7 +288,32 @@ export default function Home() {
                 <Prefix />
                 <span className="">{command}</span>
               </div>
-              <div className="p-4">{projects}</div>
+              <div className="p-4">Oh no! You&apos;re not admin!</div>
+            </div>,
+          ]);
+          setTimeout(function () {
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+          }, 1000);
+          break;
+
+        case "projects":
+          setProjectSelectionMode(true);
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+              <div className="p-4 w-full flex flex-col justify-center items-start font-normal text-yellow-600">
+                For more info on a project, enter the name of the project.
+              </div>
+              <div className="p-4 w-full flex flex-col justify-center items-start">
+                {getProjectNames()}
+              </div>
             </div>,
           ]);
           break;
@@ -231,12 +361,15 @@ export default function Home() {
                 <Prefix />
                 <span className="">{command}</span>
               </div>
-              <div className="p-4">Oh no! You&apos;re not admin!</div>
+              <div className="p-4">
+                Insufficient politeness!{" "}
+                <i className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+                  Please
+                </i>{" "}
+                try again.
+              </div>
             </div>,
           ]);
-          setTimeout(function () {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-          }, 1000);
           break;
 
         case "whoami":
@@ -313,9 +446,23 @@ export default function Home() {
 
     if (event.key === "Escape") {
       setPassword(false);
+      setProjectSelectionMode(false);
       setInputValue("");
     }
   };
+
+  const throwNewError = (passedError: boolean) => {
+    if (passedError) {
+      console.error(
+        "Uncaught TypeError: cannot read property 'pasword' of undefined at <anonymous>:13:8: 'if (pasword === 'w5devpw') {"
+      );
+    }
+  };
+
+  useEffect(() => {
+    setThrowError(true);
+    throwNewError(throwError);
+  }, [throwError]);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -332,7 +479,7 @@ export default function Home() {
         <MorseOpening />
       </div>
       <div className="flex flex-row">
-        <CopyrightHeadng />
+        <CopyrightHeading />
       </div>
       <div className="flex flex-row text-stone-400">
         <WelcomeArt />
@@ -347,6 +494,9 @@ export default function Home() {
       <div className="relative flex flex-row w-full">
         <Prefix />
         <span className={password ? "flex" : "hidden"}>Password: </span>
+        <span className={projectSelectionMode ? "flex" : "hidden"}>
+          Project:{" "}
+        </span>
         <input
           ref={inputRef}
           onKeyDown={(event) => handleKeyPress(event)}

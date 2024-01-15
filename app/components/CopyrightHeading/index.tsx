@@ -1,4 +1,4 @@
-export default function CopyrightHeadng() {
+export default function CopyrightHeading() {
   const date = new Date();
   const today =
     ("0" + (date.getMonth() + 1)).slice(-2) +
