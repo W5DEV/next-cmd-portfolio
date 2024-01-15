@@ -148,7 +148,10 @@ export const help = (
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         resume
       </span>
-      <span className="text-nowrap clamp-1 truncate">Download my resume</span>
+      <span className="text-nowrap clamp-1 truncate">
+        Download my resume (Opens in new tab. You <i>may</i> need to allow
+        pop-ups)
+      </span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
