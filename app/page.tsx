@@ -48,10 +48,10 @@ export default function Home() {
           className="flex flex-row justify-start items-center"
           key={Math.random()}
         >
-          <span className="w-96" key={Math.random()}>
+          <span className="w-96 text-cyan-600 text-shadow-sm shadow-cyan-400">
             {projects[key].name}
           </span>
-          <span key={Math.random()}>{projects[key].primaryTech}</span>
+          <span>{projects[key].primaryTech}</span>
         </div>
       );
     });
@@ -112,29 +112,29 @@ export default function Home() {
             </div>
             <div className="p-4">
               <div className="flex flex-row justify-start items-center">
-                <span className="w-48">Name:</span>
+                <span className="w-48 text-yellow-600">Name:</span>
                 <span>{selectedProject.name}</span>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <span className="w-48">Primary Tech:</span>
+                <span className="w-48 text-yellow-600">Primary Tech:</span>
                 <span>{selectedProject.primaryTech}</span>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <span className="w-48">Type:</span>
+                <span className="w-48 text-yellow-600">Type:</span>
                 <span>{selectedProject.type}</span>
               </div>
               <div className="flex flex-row justify-start items-center">
-                <span className="w-48">Status:</span>
+                <span className="w-48 text-yellow-600">Status:</span>
                 <span>{selectedProject.status}</span>
               </div>
               {selectedProject.github && (
                 <div className="flex flex-row justify-start items-center">
-                  <span className="w-48">Github</span>
+                  <span className="w-48 text-yellow-600">Github</span>
                   <span>{selectedProject.primaryTech}</span>
                 </div>
               )}
               <div className="flex flex-row justify-start items-start">
-                <span className="w-48">Tech:</span>
+                <span className="w-48 text-yellow-600">Tech:</span>
                 <div>
                   {selectedProject.tech.map((tech) => {
                     return (
@@ -149,7 +149,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col justify-start items-start">
-                <span className="w-48 pb-2">Description:</span>
+                <span className="w-48 pb-2 text-yellow-600">Description:</span>
                 <div className="pl-8">{selectedProject.description}</div>
               </div>
             </div>
@@ -308,10 +308,16 @@ export default function Home() {
                 <Prefix />
                 <span className="">{command}</span>
               </div>
-              <div className="p-4 w-full flex flex-col justify-center items-start font-normal text-yellow-600">
+              <div className="px-4 pt-4 pb-2 w-full flex flex-col justify-center items-start font-normal text-yellow-600">
                 For more info on a project, enter the name of the project.
               </div>
-              <div className="p-4 w-full flex flex-col justify-center items-start">
+              <div className="px-4 pb-4 w-full flex flex-col justify-center items-start">
+                <div className="flex flex-row justify-start items-center pb-1">
+                  <span className="w-96 text-yellow-600" key={Math.random()}>
+                    Project Name
+                  </span>
+                  <span className="text-yellow-600">Primary Tech</span>
+                </div>
                 {getProjectNames()}
               </div>
             </div>,
