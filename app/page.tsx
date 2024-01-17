@@ -438,10 +438,10 @@ export default function Home() {
                 <span>{command}</span>
               </div>
               <div className="flex flex-col items-center justify-start py-2 pl-4">
-                <p className="text-emerald-400">
-                  &apos;<i className="text-cyan-600">{command}</i>&apos; is not
+                <p className="text-red-400">
+                  <i className="text-cyan-600">&apos;{command}&apos;</i> is not
                   a valid command.{" "}
-                  <b className="font-normal text-yellow-600">
+                  <b className="font-normal text-red-400">
                     For a list of available commands, type{" "}
                   </b>
                   <b className="text-cyan-600 text-shadow-sm shadow-cyan-400 font-normal">

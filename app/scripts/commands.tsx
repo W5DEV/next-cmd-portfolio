@@ -53,7 +53,9 @@ export const social = (
   <div className="flex flex-col justify-center items-start w-full">
     <br />
     <div className="flex flex-row w-full">
-      <span className="w-48 flex flex-row">linkedin</span>
+      <span className="w-48 flex flex-row text-cyan-600 text-shadow-sm shadow-cyan-400">
+        linkedin
+      </span>
       <span>
         <a
           className="cursor-pointer hover:underline"
@@ -65,7 +67,9 @@ export const social = (
       </span>
     </div>
     <div className="flex flex-row w-full">
-      <span className="w-48">github</span>
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        github
+      </span>
       <span>
         <a
           className="cursor-pointer hover:underline"
