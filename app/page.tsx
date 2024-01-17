@@ -93,7 +93,7 @@ export default function Home() {
               <Prefix />
               <span className="">Password: *****</span>
             </div>
-            <div className="p-4 text-red-500">Password Invalid!</div>
+            <div className="p-4 text-red-600">Password Invalid!</div>
           </div>,
         ]);
       }
@@ -167,7 +167,7 @@ export default function Home() {
               <Prefix />
               <span className="">Project: {command}</span>
             </div>
-            <div className="p-4  font-normal text-red-500">
+            <div className="p-4  font-normal text-red-600">
               Project name invalid! Please try again.
             </div>
           </div>,
@@ -288,7 +288,7 @@ export default function Home() {
                 <Prefix />
                 <span className="">{command}</span>
               </div>
-              <div className="p-4 text-red-500">
+              <div className="p-4 text-red-600">
                 Oh no! You&apos;re not admin!
               </div>
             </div>,
@@ -440,10 +440,10 @@ export default function Home() {
                 <span>{command}</span>
               </div>
               <div className="flex flex-col items-center justify-start py-2 pl-4">
-                <p className="text-red-500">
+                <p className="text-red-600">
                   <i className="text-cyan-600">&apos;{command}&apos;</i> is not
                   a valid command.{" "}
-                  <b className="font-normal text-red-500">
+                  <b className="font-normal text-red-600">
                     For a list of available commands, type{" "}
                   </b>
                   <b className="text-cyan-600 text-shadow-sm shadow-cyan-400 font-normal">
