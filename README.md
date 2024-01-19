@@ -8,6 +8,5 @@ This terminal clone uses NextJS and Typescript, along with Tailwind CSS.
 <ul>
   <li>Fix caret to match caret in iTerm</li>
   <li>Add additional commands to showcase non-development related hobbies and resources</li>
-  <li>Add more easter eggs, format current easter eggs properly/more cleverly</li>
   <li>Secure domain name, add new favicon and title/description</li>
 </ul>

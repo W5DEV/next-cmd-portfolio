@@ -529,9 +529,6 @@ export default function Home() {
           type={password ? "password" : "text"}
           className="w-full bg-transparent border-none focus:border-none focus:outline-none focus:ring-0"
         />
-        {/* <div className="absolute l-10 w-full">
-            <b className="animate-caret">█</b>
-          </div> */}
       </div>
     </main>
   );
