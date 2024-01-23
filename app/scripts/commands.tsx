@@ -1,6 +1,6 @@
 const password = "w5dev";
-const linkedin = "https://www.linkedin.com/in/johnjlarson/";
-const github = "https://github.com/JLarsonMWI/";
+const linkedin = "https://www.linkedin.com/in/W5DEV/";
+const github = "https://github.com/W5DEV/";
 const email = "mailto:hello@w5dev.com";
 
 export const whois = (
@@ -62,7 +62,7 @@ export const social = (
           href={linkedin}
           target="_blank"
         >
-          linkedin.com/in/johnjlarson
+          linkedin.com/in/W5DEV
         </a>
       </span>
     </div>
@@ -76,7 +76,7 @@ export const social = (
           href={github}
           target="_blank"
         >
-          github.com/JLarsonMWI
+          github.com/W5DEV
         </a>
       </span>
     </div>

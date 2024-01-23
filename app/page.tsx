@@ -223,7 +223,7 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://github.com/JLarsonMWI");
+            window.open("https://github.com/W5DEV");
           }, 1000);
           break;
 
@@ -273,7 +273,7 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://linkedin.com/in/johnjlarson");
+            window.open("https://linkedin.com/in/W5DEV");
           }, 1000);
           break;
 
