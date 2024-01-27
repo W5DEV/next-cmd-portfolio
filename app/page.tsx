@@ -298,6 +298,24 @@ export default function Home() {
           }, 1000);
           break;
 
+        case "please please sudo":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+              <div className="p-4">
+                Visitor is overly polite. Correct the request and resubmit.
+              </div>
+            </div>,
+          ]);
+          break;
+
         case "projects":
           setProjectSelectionMode(true);
           setHistory([
@@ -386,11 +404,11 @@ export default function Home() {
                 <span className="">{command}</span>
               </div>
               <div className="p-4">
-                Insufficient politeness!{" "}
+                Visitor is insufficiently polite to use sudo.{" "}
                 <i className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
                   Please
                 </i>{" "}
-                try again.
+                correct the request and try again.
               </div>
             </div>,
           ]);
