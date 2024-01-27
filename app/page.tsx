@@ -408,7 +408,7 @@ export default function Home() {
                 <i className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
                   Please
                 </i>{" "}
-                correct the request and try again.
+                correct the request and resubmit.
               </div>
             </div>,
           ]);
