@@ -11,6 +11,7 @@ import Prefix from "./components/Prefix";
 import WelcomeArt from "./components/WelcomeArt";
 import { whois, whoami, social, secret, help } from "./scripts/commands";
 import * as Projects from "./scripts/projects";
+import Link from "next/link";
 interface IProjects {
   [key: string]: IProject;
 }
@@ -115,6 +116,16 @@ export default function Home() {
                 <span className="w-48 text-yellow-600">Name:</span>
                 <span>{selectedProject.name}</span>
               </div>
+              {selectedProject.link && (
+                <div className="flex flex-row justify-start items-center">
+                  <Link
+                    href={"{selectedProject.link}"}
+                    className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
+                  >
+                    Visit the Site!
+                  </Link>
+                </div>
+              )}
               <div className="flex flex-row justify-start items-center">
                 <span className="w-48 text-yellow-600">Primary Tech:</span>
                 <span>{selectedProject.primaryTech}</span>
@@ -130,7 +141,93 @@ export default function Home() {
               {selectedProject.github && (
                 <div className="flex flex-row justify-start items-center">
                   <span className="w-48 text-yellow-600">Github</span>
-                  <span>{selectedProject.primaryTech}</span>
+                  <span>{selectedProject.github}</span>
+                </div>
+              )}
+              <div className="flex flex-row justify-start items-start">
+                <span className="w-48 text-yellow-600">Tech:</span>
+                <div>
+                  {selectedProject.tech.map((tech) => {
+                    return (
+                      <span
+                        className="flex flex-row justify-start items-center"
+                        key={Math.random()}
+                      >
+                        {tech}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex flex-col justify-start items-start">
+                <span className="w-48 pb-2 text-yellow-600">Description:</span>
+                <div className="pl-8">{selectedProject.description}</div>
+              </div>
+            </div>
+          </div>,
+        ]);
+        setProjectSelectionMode(false);
+      } else {
+        setHistory([
+          ...history,
+          <div
+            className="flex flex-col items-start justify-center"
+            key={Math.random()}
+          >
+            <div className="w-full flex flex-row justify-start items-center">
+              <Prefix />
+              <span className="">Project: {command}</span>
+            </div>
+            <div className="p-4  font-normal text-red-600">
+              Project name invalid! Please try again.
+            </div>
+          </div>,
+        ]);
+      }
+    } else if (getProject(command.toLowerCase())) {
+      const selectedProject = getProject(command.toLowerCase());
+      if (selectedProject) {
+        setHistory([
+          ...history,
+          <div
+            className="flex flex-col items-start justify-center"
+            key={Math.random()}
+          >
+            <div className="w-full flex flex-row justify-start items-center">
+              <Prefix />
+              <span className="">Project: {command}</span>
+            </div>
+            <div className="p-4">
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48 text-yellow-600">Name:</span>
+                <span>{selectedProject.name}</span>
+              </div>
+              {selectedProject.link && (
+                <div className="flex flex-row justify-start items-center">
+                  <Link
+                    href={"{selectedProject.link}"}
+                    className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
+                  >
+                    Visit the Site!
+                  </Link>
+                </div>
+              )}
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48 text-yellow-600">Primary Tech:</span>
+                <span>{selectedProject.primaryTech}</span>
+              </div>
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48 text-yellow-600">Type:</span>
+                <span>{selectedProject.type}</span>
+              </div>
+              <div className="flex flex-row justify-start items-center">
+                <span className="w-48 text-yellow-600">Status:</span>
+                <span>{selectedProject.status}</span>
+              </div>
+              {selectedProject.github && (
+                <div className="flex flex-row justify-start items-center">
+                  <span className="w-48 text-yellow-600">Github</span>
+                  <span>{selectedProject.github}</span>
                 </div>
               )}
               <div className="flex flex-row justify-start items-start">
@@ -239,6 +336,10 @@ export default function Home() {
                 <span className="">{command}</span>
               </div>
               <div className="p-4">{help}</div>
+              <div className="px-4 pt-2 pb-2 w-full flex flex-col justify-center items-start font-normal text-yellow-600 italic">
+                You may also enter the name of a project at any time to view
+                details.
+              </div>
             </div>,
           ]);
           break;
@@ -330,6 +431,10 @@ export default function Home() {
               </div>
               <div className="px-4 pt-4 pb-2 w-full flex flex-col justify-center items-start font-normal text-yellow-600">
                 For more info on a project, enter the name of the project.
+              </div>
+              <div className="px-4 pb-2 w-full flex flex-col justify-center items-start font-normal text-emerald-400 italic">
+                If the project is public, the project website will be available
+                for you to visit!
               </div>
               <div className="px-4 pb-4 w-full flex flex-col justify-center items-start">
                 <div className="flex flex-row justify-start items-center pb-1">
