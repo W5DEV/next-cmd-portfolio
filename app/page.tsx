@@ -119,7 +119,7 @@ export default function Home() {
               {selectedProject.link && (
                 <div className="flex flex-row justify-start items-center">
                   <Link
-                    href={"{selectedProject.link}"}
+                    href={selectedProject.link}
                     className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
                   >
                     Visit the Site!
@@ -205,7 +205,7 @@ export default function Home() {
               {selectedProject.link && (
                 <div className="flex flex-row justify-start items-center">
                   <Link
-                    href={"{selectedProject.link}"}
+                    href={selectedProject.link}
                     className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
                   >
                     Visit the Site!
@@ -320,7 +320,7 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://github.com/W5DEV");
+            window.open("https://github.com/W5DEV/", "_blank");
           }, 1000);
           break;
 
@@ -374,7 +374,7 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://linkedin.com/in/W5DEV");
+            window.open("https://linkedin.com/in/W5DEV/", "_blank");
           }, 1000);
           break;
 
@@ -395,7 +395,10 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            window.open(
+              "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "_blank"
+            );
           }, 1000);
           break;
 
@@ -462,7 +465,7 @@ export default function Home() {
               </div>
             </div>,
           ]);
-          window.open("./john-larson-resume.pdf");
+          window.open("./john-larson-resume.pdf", "_blank");
           break;
 
         case "secret":
