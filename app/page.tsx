@@ -4,14 +4,12 @@ import type { IProject } from "./scripts/projects";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import CopyrightHeading from "./components/CopyrightHeading";
 import HelpText from "./components/HelpText";
-import Input from "./components/Input";
 import MorseClosing from "./components/MorseEnding";
 import MorseOpening from "./components/MorseOpening";
 import Prefix from "./components/Prefix";
 import WelcomeArt from "./components/WelcomeArt";
 import { whois, whoami, social, secret, help } from "./scripts/commands";
 import * as Projects from "./scripts/projects";
-import Link from "next/link";
 interface IProjects {
   [key: string]: IProject;
 }
@@ -118,12 +116,13 @@ export default function Home() {
               </div>
               {selectedProject.link && (
                 <div className="flex flex-row justify-start items-center">
-                  <Link
+                  <a
+                    target="_blank"
                     href={selectedProject.link}
                     className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
                   >
                     Visit the Site!
-                  </Link>
+                  </a>
                 </div>
               )}
               <div className="flex flex-row justify-start items-center">
@@ -204,12 +203,13 @@ export default function Home() {
               </div>
               {selectedProject.link && (
                 <div className="flex flex-row justify-start items-center">
-                  <Link
+                  <a
+                    target="_blank"
                     href={selectedProject.link}
                     className="w-48 text-yellow-600 underline text-shadow-sm shadow-yellow-400"
                   >
                     Visit the Site!
-                  </Link>
+                  </a>
                 </div>
               )}
               <div className="flex flex-row justify-start items-center">
