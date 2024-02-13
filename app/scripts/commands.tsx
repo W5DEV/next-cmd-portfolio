@@ -42,9 +42,9 @@ export const whois = (
 export const whoami = (
   <div className="flex flex-col justify-start items-start w-full">
     <br />
-    <span>
-      The paradox of “Who am I?” is: we never know, but, we constantly find out.
-    </span>
+    <a href="https://youtu.be/YFNsRogBqb0">
+      Blimey, didn&apos;t you ever wonder where yer mom and dad learned it all?
+    </a>
     <br />
   </div>
 );
@@ -91,18 +91,8 @@ export const secret = (
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         sudo
       </span>{" "}
-      <span>Only use if you&apos;re admin</span>
+      <span>Only use if you&apos;re the admin</span>
     </div>
-    <br />
-  </div>
-);
-
-export const projects = (
-  <div>
-    <br />
-    <span>
-      Still curating... most projects are offline, on GitHub, or confidential.
-    </span>
     <br />
   </div>
 );
