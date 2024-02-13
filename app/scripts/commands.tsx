@@ -116,7 +116,7 @@ export const help = (
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         email
       </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Do not email me</span>
+      <span className="text-nowrap clamp-1 truncate">Contact me!</span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
@@ -136,7 +136,9 @@ export const help = (
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         projects
       </span>
-      <span className="text-nowrap clamp-1 truncate">View coding projects</span>
+      <span className="text-nowrap clamp-1 truncate">
+        View development projects
+      </span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
