@@ -42,7 +42,12 @@ export const whois = (
 export const whoami = (
   <div className="flex flex-col justify-start items-start w-full">
     <br />
-    <a className="underline hover:italic" href="https://youtu.be/YFNsRogBqb0">
+    <a
+      className="underline hover:italic"
+      href="https://youtu.be/YFNsRogBqb0"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Blimey, didn&apos;t you ever wonder where yer mom and dad learned it all?
       (Click me...)
     </a>
