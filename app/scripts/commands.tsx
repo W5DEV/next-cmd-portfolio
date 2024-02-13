@@ -90,7 +90,7 @@ export const secret = (
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         sudo
-      </span>{" "}
+      </span>
       <span>Only use if you&apos;re the admin</span>
     </div>
     <br />
@@ -102,35 +102,15 @@ export const help = (
     <br />
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        banner
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Display the header</span>
-    </div>
-    <div className="flex flex-row justify-between items-center">
-      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        clear
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Clear terminal</span>
-    </div>
-    <div className="flex flex-row justify-between items-center">
-      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        email
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Contact me!</span>
-    </div>
-    <div className="flex flex-row justify-between items-center">
-      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        help
+        whois
       </span>
-      <span className="text-nowrap clamp-1 truncate">
-        You obviously already know what this does
-      </span>
+      <span className="text-nowrap clamp-1 truncate">Who is W5DEV?</span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        history
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">View command history</span>
+        whoami
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Who are you?</span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
@@ -150,12 +130,6 @@ export const help = (
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        secret
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Find the password</span>
-    </div>
-    <div className="flex flex-row justify-between items-center">
-      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         social
       </span>
       <span className="text-nowrap clamp-1 truncate">
@@ -164,15 +138,41 @@ export const help = (
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        whoami
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Who are you?</span>
+        email
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Contact me!</span>
     </div>
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
-        whois
-      </span>{" "}
-      <span className="text-nowrap clamp-1 truncate">Who is W5DEV?</span>
+        banner
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Display the header</span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        clear
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Clear terminal</span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        help
+      </span>
+      <span className="text-nowrap clamp-1 truncate">
+        You obviously already know what this does
+      </span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        history
+      </span>
+      <span className="text-nowrap clamp-1 truncate">View command history</span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        secret
+      </span>
+      <span className="text-nowrap clamp-1 truncate">Find the password</span>
     </div>
     <br />
   </div>
