@@ -8,7 +8,14 @@ import MorseClosing from "./components/MorseEnding";
 import MorseOpening from "./components/MorseOpening";
 import Prefix from "./components/Prefix";
 import WelcomeArt from "./components/WelcomeArt";
-import { whois, whoami, social, secret, help } from "./scripts/commands";
+import {
+  whois,
+  whoami,
+  social,
+  secret,
+  help,
+  openThePodBayDoors,
+} from "./scripts/commands";
 import * as Projects from "./scripts/projects";
 interface IProjects {
   [key: string]: IProject;
@@ -339,6 +346,9 @@ export default function Home() {
               <div className="px-4 pt-2 pb-2 w-full flex flex-col justify-center items-start font-normal text-yellow-600 italic">
                 You may also enter the name of a project at any time to view
                 details.
+                <p className="text-yellow-600 mt-2 italic text-sm">
+                  Tip: some commands may be hidden!
+                </p>
               </div>
             </div>,
           ]);
@@ -376,6 +386,38 @@ export default function Home() {
           setTimeout(function () {
             window.open("https://linkedin.com/in/W5DEV/", "_blank");
           }, 1000);
+          break;
+
+        case "openthepodbaydoors" || "open the pod bay doors":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+              <div className="p-4">{openThePodBayDoors}</div>
+            </div>,
+          ]);
+          break;
+
+        case "open the pod bay doors":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+              <div className="p-4">{openThePodBayDoors}</div>
+            </div>,
+          ]);
           break;
 
         case "please sudo":
@@ -565,7 +607,7 @@ export default function Home() {
                 <Prefix />
                 <span>{command}</span>
               </div>
-              <div className="flex flex-col items-center justify-start py-2 pl-4">
+              <div className="flex flex-col items-start justify-start py-2 pl-4">
                 <p className="text-red-600">
                   <i className="text-cyan-600">&apos;{command}&apos;</i> is not
                   a valid command.{" "}

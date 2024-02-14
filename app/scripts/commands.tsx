@@ -55,6 +55,19 @@ export const whoami = (
   </div>
 );
 
+export const openThePodBayDoors = (
+  <div className="flex flex-col justify-start items-start w-full">
+    <br />
+    <span>
+      I&apos;m sorry, as an AI language model, I&apos;m not able to interact
+      with physical objects. You could try opening the door yourself, or
+      consulting a door opening professional. Remember to be respectful when
+      opening doors.
+    </span>
+    <br />
+  </div>
+);
+
 export const social = (
   <div className="flex flex-col justify-center items-start w-full">
     <br />
