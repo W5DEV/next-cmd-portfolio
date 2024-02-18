@@ -295,6 +295,24 @@ export default function Home() {
           ]);
           break;
 
+        case "selfdestruct":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setTimeout(function () {
+            window.open("/self-destruct", "_self");
+          }, 1000);
+          break;
+
         case "email":
           setHistory([
             ...history,
@@ -663,7 +681,7 @@ export default function Home() {
   }, [isEditing]);
 
   return (
-    <main onClick={toggleEditing}>
+    <main className="main" onClick={toggleEditing}>
       <div className="flex flex-row text-stone-400 text-xs">
         <MorseOpening />
       </div>
