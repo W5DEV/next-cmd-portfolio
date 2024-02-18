@@ -31,6 +31,7 @@ export default function Home() {
   const [projectSelectionMode, setProjectSelectionMode] =
     useState<boolean>(false);
   const [pageDirection, setPageDirection] = useState<string>("up");
+  const [spin, setSpin] = useState<boolean>(false);
   const inputRef = useRef(null);
   const toggleEditing = () => {
     setEditing(!isEditing);
@@ -649,6 +650,38 @@ export default function Home() {
           ]);
           break;
 
+        case "spin":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setSpin(true);
+          break;
+
+        case "stop spinning":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setSpin(false);
+          break;
+
         case "sudo":
           setHistory([
             ...history,
@@ -772,13 +805,15 @@ export default function Home() {
   return (
     <main
       className={
-        pageDirection === "down"
+        pageDirection === "down" && !spin
           ? "main rotate-180"
-          : pageDirection === "right"
+          : pageDirection === "right" && !spin
           ? "main rotate-90"
-          : pageDirection === "left"
+          : pageDirection === "left" && !spin
           ? "main -rotate-90"
-          : "main"
+          : pageDirection === "up" && !spin
+          ? "main"
+          : "main animate-spin"
       }
       onClick={toggleEditing}
     >
