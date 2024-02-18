@@ -663,10 +663,7 @@ export default function Home() {
   }, [isEditing]);
 
   return (
-    <main
-      onClick={toggleEditing}
-      className="flex min-h-screen min-w-[700px] flex-col items-start justify-start p-4 text-cyan-600 font-mono gap-2 tracking-widest border-4 border-double border-stone-400 outline-dashed outline-stone-400 -outline-offset-8"
-    >
+    <main onClick={toggleEditing}>
       <div className="flex flex-row text-stone-400 text-xs">
         <MorseOpening />
       </div>
@@ -695,7 +692,6 @@ export default function Home() {
           onChange={(event) => setInputValue(event.currentTarget.value)}
           value={inputValue}
           type={password ? "password" : "text"}
-          className="w-full bg-transparent border-none focus:border-none focus:outline-none focus:ring-0"
         />
       </div>
     </main>
