@@ -1,6 +1,6 @@
 "use client";
 
-import type { IProject } from "./scripts/projects";
+import type { IProject } from "./components/Projects";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import CopyrightHeading from "./components/CopyrightHeading";
 import HelpText from "./components/HelpText";
@@ -15,8 +15,8 @@ import {
   secret,
   help,
   openThePodBayDoors,
-} from "./scripts/commands";
-import * as Projects from "./scripts/projects";
+} from "./components/Commands";
+import * as Projects from "./components/Projects";
 interface IProjects {
   [key: string]: IProject;
 }
