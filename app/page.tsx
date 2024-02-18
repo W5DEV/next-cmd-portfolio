@@ -30,6 +30,7 @@ export default function Home() {
   const [throwError, setThrowError] = useState<boolean>(false);
   const [projectSelectionMode, setProjectSelectionMode] =
     useState<boolean>(false);
+  const [pageDirection, setPageDirection] = useState<string>("up");
   const inputRef = useRef(null);
   const toggleEditing = () => {
     setEditing(!isEditing);
@@ -295,24 +296,6 @@ export default function Home() {
           ]);
           break;
 
-        case "selfdestruct":
-          setHistory([
-            ...history,
-            <div
-              className="flex flex-col items-start justify-center"
-              key={Math.random()}
-            >
-              <div className="w-full flex flex-row justify-start items-center">
-                <Prefix />
-                <span className="">{command}</span>
-              </div>
-            </div>,
-          ]);
-          setTimeout(function () {
-            window.open("/self-destruct", "_self");
-          }, 1000);
-          break;
-
         case "email":
           setHistory([
             ...history,
@@ -438,6 +421,94 @@ export default function Home() {
           ]);
           break;
 
+        case "reset rotation":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setPageDirection("up");
+          break;
+
+        case "rotate right":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          if (pageDirection === "up") {
+            setPageDirection("right");
+          } else if (pageDirection === "right") {
+            setPageDirection("down");
+          } else if (pageDirection === "down") {
+            setPageDirection("left");
+          } else if (pageDirection === "left") {
+            setPageDirection("up");
+          }
+          break;
+
+        case "rotate left":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          if (pageDirection === "up") {
+            setPageDirection("left");
+          } else if (pageDirection === "left") {
+            setPageDirection("down");
+          } else if (pageDirection === "down") {
+            setPageDirection("right");
+          } else if (pageDirection === "right") {
+            setPageDirection("up");
+          }
+          break;
+
+        case "rotate 180":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          if (pageDirection === "up") {
+            setPageDirection("down");
+          } else if (pageDirection === "right") {
+            setPageDirection("left");
+          } else if (pageDirection === "down") {
+            setPageDirection("up");
+          } else if (pageDirection === "left") {
+            setPageDirection("right");
+          }
+          break;
+
         case "please sudo":
           setHistory([
             ...history,
@@ -542,6 +613,24 @@ export default function Home() {
             </div>,
           ]);
           setPassword(true);
+          break;
+
+        case "selfdestruct":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setTimeout(function () {
+            window.open("/self-destruct", "_self");
+          }, 1000);
           break;
 
         case "social":
@@ -681,7 +770,18 @@ export default function Home() {
   }, [isEditing]);
 
   return (
-    <main className="main" onClick={toggleEditing}>
+    <main
+      className={
+        pageDirection === "down"
+          ? "main rotate-180"
+          : pageDirection === "right"
+          ? "main rotate-90"
+          : pageDirection === "left"
+          ? "main -rotate-90"
+          : "main"
+      }
+      onClick={toggleEditing}
+    >
       <div className="flex flex-row text-stone-400 text-xs">
         <MorseOpening />
       </div>
