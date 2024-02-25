@@ -126,7 +126,7 @@ export const recipeVaultOnline: IProject = {
   name: "Online Cookbook v1",
   link: "https://recipes.jjlarson.com/",
   type: "Personal",
-  status: "Deployed",
+  status: "Deployed/Outdated",
   description:
     "This project was born out of the desire to have an easy way to store my personal recipes and family recipes in a manner that got rid of the need to keep track of paper and flash cards that collect gross food and spills. The first version of this, Recipe Vault Online, uses VueJS and displays recipes in a pop up window. The implementation of this led to some problems with sharing and bookmarking recipes, so I began developing the second iteration of this based on NextJS.",
   github: "https://github.com/W5DEV/vite-recipe-vault-online",
@@ -138,16 +138,16 @@ export const recipeVaultOnlineV2: IProject = {
   name: "Online Cookbook v2",
   link: "https://cookbook.jjlarson.com/",
   type: "Personal",
-  status: "In Progress",
+  status: "Deployed/In Use",
   description:
-    "The second version of my Online Cookbook/Recipe Storage is made with NextJS, and is currently a work in progress while I get it to a state where it satisfies the same requirements as the previous version. This new version is quicker, more secure and assigns URLs for each recipe, so sharing is made much easier.",
+    "The second version of my Online Cookbook/Recipe Storage is made with NextJS. This new version is quicker, more secure and assigns URLs for each recipe, so sharing is made much easier. My goal with this version was to make a stripped down, less complex version that could easily be used by me and my family, but I am dockerizing this version so it can ultimately be run locally. My goal is for this project to also be easily cloned and spun up for anyone else's use as well. I have made an accompanying API for this project, which is built with Go and Docker, so that portion can also be spun up and used easily by anyone.",
   github: "https://github.com/W5DEV/next-recipes",
-  tech: ["NextJS", "TailwindCSS"],
+  tech: ["NextJS", "TailwindCSS, Docker"],
   primaryTech: "NextJS",
 };
 
 export const recipeApi: IProject = {
-  name: "Recipe API",
+  name: "Recipe API v1",
   link: null,
   type: "Personal",
   status: "In Progress",
@@ -156,6 +156,18 @@ export const recipeApi: IProject = {
   github: "https://github.com/W5DEV/nest-prisma-api",
   tech: ["NestJS", "Prisma"],
   primaryTech: "NestJS",
+};
+
+export const goRecipeApi: IProject = {
+  name: "Recipe API v2",
+  link: null,
+  type: "Personal",
+  status: "In Progress",
+  description:
+    "I found prisma to be a bit bulky and complex to maintain, and I also noticed updates to Nest or Prisma sometimes broke some API routes or my database schema. I decided to rebuild it Go to both improve performance and to improve my skills with Go. I built this API in about 6 hours and it is currently the one I have in production for use with my current Online Cookbook iteration. My goal was to make a self-hosted version, which can be easily cloned and spun up by anyone with their own credentials using the Dockerfile.",
+  github: "https://github.com/W5DEV/nest-prisma-api",
+  tech: ["Go", "Gin", "GORM", "Docker"],
+  primaryTech: "Go",
 };
 
 export const greatIdeaMediaPlatform: IProject = {
