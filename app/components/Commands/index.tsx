@@ -121,6 +121,14 @@ export const help = (
     <br />
     <div className="flex flex-row justify-between items-center">
       <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
+        contact
+      </span>
+      <span className="text-nowrap clamp-1 truncate">
+        Leave me a message and let&apos;s connect!
+      </span>
+    </div>
+    <div className="flex flex-row justify-between items-center">
+      <span className="w-48 text-cyan-600 text-shadow-sm shadow-cyan-400">
         whois
       </span>
       <span className="text-nowrap clamp-1 truncate">Who is W5DEV?</span>
