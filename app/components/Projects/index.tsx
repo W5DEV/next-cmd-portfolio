@@ -241,3 +241,27 @@ export const ktorMediaApi: IProject = {
   tech: ["Kotlin", "Ktor"],
   primaryTech: "Kotlin",
 };
+
+export const greatIdeaDevelopment: IProject = {
+  name: "Great Idea Development",
+  link: "https://www.greatidea.dev/",
+  type: "Personal",
+  status: "Deployed/WIP",
+  description:
+    "My goal for Great Idea Development is to build a team of developers and potentially designers to serve the web and digital needs of small businesses. My target audience for this will be local businesses and individuals who need to kickstart or refresh their online presence. I am hoping this website will eventually be a bastion of unique UI elements and designs that we can accomplish on a website. For now, this serves as my main contact point for prospective clients and collaborators.",
+  github: "https://github.com/W5DEV/next-great-idea",
+  tech: ["NextJS", "TailwindCSS"],
+  primaryTech: "NextJS",
+};
+
+export const extremeNetworksAPIJSONParser: IProject = {
+  name: "Extreme Networks API JSON Parser",
+  link: "https://extreme.greatidea.dev/",
+  type: "Professional",
+  status: "Deployed/WIP",
+  description:
+    "This project was built to help a client of mine parse JSON data from an API and display it in a more user-friendly manner. This project was built with Solid.js and TailwindCSS, and I used the project as an opportunity to learn more about the Solid.js framework and how viable it would be for future projects that require a lightweight frontend presence.",
+  github: "https://github.com/W5DEV/solid-extreme-api",
+  tech: ["Solid.js", "TailwindCSS"],
+  primaryTech: "Solid.js",
+};

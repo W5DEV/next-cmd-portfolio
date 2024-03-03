@@ -297,6 +297,24 @@ export default function Home() {
           ]);
           break;
 
+        case "contact":
+          setHistory([
+            ...history,
+            <div
+              className="flex flex-col items-start justify-center"
+              key={Math.random()}
+            >
+              <div className="w-full flex flex-row justify-start items-center">
+                <Prefix />
+                <span className="">{command}</span>
+              </div>
+            </div>,
+          ]);
+          setTimeout(function () {
+            window.open("https://www.greatidea.dev/", "_blank");
+          }, 1000);
+          break;
+
         case "email":
           setHistory([
             ...history,
@@ -311,8 +329,8 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("mailto:hello@w5dev.com");
-          });
+            window.open("https://www.greatidea.dev/", "_blank");
+          }, 1000);
           break;
 
         case "github":
