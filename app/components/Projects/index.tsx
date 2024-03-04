@@ -213,7 +213,7 @@ export const terminalPortfolio: IProject = {
   status: "In Progress",
   description:
     "I have been more on the nerdy side for my entire life. I wanted a portfolio that demonstrated my own personality and interests, and I thought it would be fun to redesign a command terminal inside of a web browser. I took lots of inspiration to the other terminal projects that exist to get a feel for how they handled the design and find some inspiration for fun ways to incorporate my own flare on the project. I am a believer in using the technology stack that you are currently using most in your career/life, so I decided to write this in NextJS, using Tailwind for styling. There's lots of fun easter eggs and hidden information scattered about this project, so I hope this can be a website that grows and adapts as I continue to think of more fun things to add to it.",
-  github: "https://github.com/W5DEV/nextjs-cmd-portfolio",
+  github: "https://github.com/W5DEV/next-cmd-portfolio",
   tech: ["NextJS", "TailwindCSS"],
   primaryTech: "NextJS",
 };
