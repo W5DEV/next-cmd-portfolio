@@ -165,7 +165,7 @@ export const goRecipeApi: IProject = {
   status: "In Progress",
   description:
     "I found prisma to be a bit bulky and complex to maintain, and I also noticed updates to Nest or Prisma sometimes broke some API routes or my database schema. I decided to rebuild it Go to both improve performance and to improve my skills with Go. I built this API in about 6 hours and it is currently the one I have in production for use with my current Online Cookbook iteration. My goal was to make a self-hosted version, which can be easily cloned and spun up by anyone with their own credentials using the Dockerfile.",
-  github: "https://github.com/W5DEV/nest-prisma-api",
+  github: "https://github.com/W5DEV/go-recipe-api",
   tech: ["Go", "Gin", "GORM", "Docker"],
   primaryTech: "Go",
 };
@@ -213,7 +213,7 @@ export const terminalPortfolio: IProject = {
   status: "In Progress",
   description:
     "I have been more on the nerdy side for my entire life. I wanted a portfolio that demonstrated my own personality and interests, and I thought it would be fun to redesign a command terminal inside of a web browser. I took lots of inspiration to the other terminal projects that exist to get a feel for how they handled the design and find some inspiration for fun ways to incorporate my own flare on the project. I am a believer in using the technology stack that you are currently using most in your career/life, so I decided to write this in NextJS, using Tailwind for styling. There's lots of fun easter eggs and hidden information scattered about this project, so I hope this can be a website that grows and adapts as I continue to think of more fun things to add to it.",
-  github: "https://github.com/W5DEV/nextjs-cmd-portfolio",
+  github: "https://github.com/W5DEV/next-cmd-portfolio",
   tech: ["NextJS", "TailwindCSS"],
   primaryTech: "NextJS",
 };
