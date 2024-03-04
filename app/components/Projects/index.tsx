@@ -165,7 +165,7 @@ export const goRecipeApi: IProject = {
   status: "In Progress",
   description:
     "I found prisma to be a bit bulky and complex to maintain, and I also noticed updates to Nest or Prisma sometimes broke some API routes or my database schema. I decided to rebuild it Go to both improve performance and to improve my skills with Go. I built this API in about 6 hours and it is currently the one I have in production for use with my current Online Cookbook iteration. My goal was to make a self-hosted version, which can be easily cloned and spun up by anyone with their own credentials using the Dockerfile.",
-  github: "https://github.com/W5DEV/nest-prisma-api",
+  github: "https://github.com/W5DEV/go-recipe-api",
   tech: ["Go", "Gin", "GORM", "Docker"],
   primaryTech: "Go",
 };
