@@ -129,7 +129,7 @@ export const recipeVaultOnline: IProject = {
   status: "Deployed/Outdated",
   description:
     "This project was born out of the desire to have an easy way to store my personal recipes and family recipes in a manner that got rid of the need to keep track of paper and flash cards that collect gross food and spills. The first version of this, Recipe Vault Online, uses VueJS and displays recipes in a pop up window. The implementation of this led to some problems with sharing and bookmarking recipes, so I began developing the second iteration of this based on NextJS.",
-  github: "https://github.com/W5DEV/vite-recipe-vault-online",
+  github: "https://github.com/W5DEV/vue-recipe-vault-online",
   tech: ["VueJS", "TailwindCSS", "Supabase"],
   primaryTech: "VueJS",
 };
@@ -201,7 +201,7 @@ export const portfolioV1: IProject = {
   status: "Deployed",
   description:
     "My first real iteration of an online portfolio was built with Angular when I first started learning JavaScript frameworks. I have since killed that project and I rebuilt and redesigned it using VueJS. My objective with this portfolio was to simply make a simple and clean website as a home to show off my projects and experience. I implemented icons and animated menus to make things a bit more aesthetically appealing. I originally built this version of my portfolio with NextJS, but decided to overhaul it in a 1-to-1 way using VueJS to better learn and familiar myself with the framework, which I was using for a project for a client at work. This version of my portfolio was never fully realized, and recently I decided to redesign it to be something more unique and fun, the result of which is the website you are currently visiting.",
-  github: "https://github.com/W5DEV/vite-portfolio",
+  github: "https://github.com/W5DEV/vue-portfolio",
   tech: ["VueJS", "TailwindCSS"],
   primaryTech: "VueJS",
 };
