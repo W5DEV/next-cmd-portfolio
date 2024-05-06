@@ -182,18 +182,6 @@ export const greatIdeaMediaPlatform: IProject = {
   primaryTech: "NextJS",
 };
 
-export const myBudgetBuddy: IProject = {
-  name: "My Budget Buddy",
-  link: null,
-  type: "Personal",
-  status: "In Progress",
-  description:
-    "This is my latest WIP project. I find myself becoming more obsessed with finances and budgeting as I get older, and while I have relied on a google doc for my personal budget and outlook, I thought it would be extremely useful to make an app that allows users to easily track their income and expenses. After doing lots of research, I determined a native app with no connection to the cloud would be the most honest way of doing this. I have used several apps and the one main problem with these apps is the insistence on connecting to your personal accounts and shoving ads and up-charges to the user. I feel strongly about being able to have access to useful tools without having to compromise your personal security and without being constantly targeted for advertisement revenue. My plan is to release this app on app stores for a small, one time fee, with promises that their data will never be stored on cloud servers and there will never be any up-charges or ads.",
-  github: "https://github.com/W5DEV/nextjs-budget-buddy",
-  tech: ["Kotlin"],
-  primaryTech: "Kotlin",
-};
-
 export const portfolioV1: IProject = {
   name: "VueJS Portfolio",
   link: "https://vite-project-seven-dusky.vercel.app/",
@@ -243,15 +231,27 @@ export const ktorMediaApi: IProject = {
 };
 
 export const greatIdeaDevelopment: IProject = {
-  name: "Great Idea Development",
+  name: "GreatIdea.dev",
   link: "https://www.greatidea.dev/",
+  type: "Personal",
+  status: "Deployed",
+  description:
+    "The purpose behind GreatIdea.dev is to provide expert-level web development services to small businesses and individuals in need of establishing or refreshing their online presence, but who may not have the resources or funds to hire a large agency. I consider this 'business' an evolution of my freelance work, which has assumed various names over the years. The website itself is built with NextJS and TailwindCSS, and the actual development focuses on showcasing more of my professional work to attract prospective clients.",
+  github: "https://github.com/GreatIdea-Dev/greatideadotdev-website",
+  tech: ["NextJS", "TailwindCSS"],
+  primaryTech: "NextJS",
+};
+
+export const greatIdeaUI: IProject = {
+  name: "GreatIdea.dev UI Kit",
+  link: "https://ui.greatidea.dev/",
   type: "Personal",
   status: "Deployed/WIP",
   description:
-    "My goal for Great Idea Development is to build a team of developers and potentially designers to serve the web and digital needs of small businesses. My target audience for this will be local businesses and individuals who need to kickstart or refresh their online presence. I am hoping this website will eventually be a bastion of unique UI elements and designs that we can accomplish on a website. For now, this serves as my main contact point for prospective clients and collaborators.",
-  github: "https://github.com/W5DEV/next-great-idea",
+    "The purpose behind this project is to be a collection of reusable components that I can grab and use throughout various projects that I work on to add a bit of extra flair. My intention is to make this a living project that I can continually expand and refine as I realize more ideas for clever components. So far, I have designed a theme picker, which allows the user to select their preferred color for dark mode or light mode, and also lets them choose an accent color that is used throughout the site. I have also integrated that with some basic components, like a heading and a bordered container which uses some logic to create gradients when the mouse moves over the specific area.",
+  github: "https://github.com/GreatIdea-Dev/greatideadotdev-uikit",
   tech: ["NextJS", "TailwindCSS"],
-  primaryTech: "NextJS",
+  primaryTech: "TailwindCSS",
 };
 
 export const extremeNetworksAPIJSONParser: IProject = {
@@ -261,7 +261,7 @@ export const extremeNetworksAPIJSONParser: IProject = {
   status: "Deployed/WIP",
   description:
     "This project was built to help a client of mine parse JSON data from an API and display it in a more user-friendly manner. This project was built with Solid.js and TailwindCSS, and I used the project as an opportunity to learn more about the Solid.js framework and how viable it would be for future projects that require a lightweight frontend presence.",
-  github: "https://github.com/W5DEV/solid-extreme-api",
+  github: "https://github.com/GreatIdea-Dev/extreme-jsonparser",
   tech: ["Solid.js", "TailwindCSS"],
   primaryTech: "Solid.js",
 };
