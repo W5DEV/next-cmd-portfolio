@@ -265,3 +265,15 @@ export const extremeNetworksAPIJSONParser: IProject = {
   tech: ["Solid.js", "TailwindCSS"],
   primaryTech: "Solid.js",
 };
+
+export const asteroidBlasterGame: IProject = {
+  name: "Asteroid Blaster Game",
+  link: null,
+  type: "Personal",
+  status: "WIP",
+  description:
+    "This game is a simple asteroid blaster game built with Godot. I am using this project to get familiar with using Godot and work through some of the basics of game development. My intention is to make this game cross platform and think through various features and mechanics that I can implement to make the game more fun and unique.",
+  github: "https://github.com/W5DEV/godot-asteroid-blaster",
+  tech: ["Godot"],
+  primaryTech: "Godot",
+};
