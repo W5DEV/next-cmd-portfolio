@@ -149,7 +149,9 @@ export default function Home() {
               {selectedProject.github && (
                 <div className="flex flex-row justify-start items-center">
                   <span className="w-48 text-yellow-600">Github</span>
-                  <span>{selectedProject.github}</span>
+                  <a href={selectedProject.github} target="_blank">
+                    {selectedProject.github}
+                  </a>
                 </div>
               )}
               <div className="flex flex-row justify-start items-start">
@@ -236,7 +238,9 @@ export default function Home() {
               {selectedProject.github && (
                 <div className="flex flex-row justify-start items-center">
                   <span className="w-48 text-yellow-600">Github</span>
-                  <span>{selectedProject.github}</span>
+                  <a href={selectedProject.github} target="_blank">
+                    {selectedProject.github}
+                  </a>
                 </div>
               )}
               <div className="flex flex-row justify-start items-start">
@@ -408,7 +412,7 @@ export default function Home() {
           }, 1000);
           break;
 
-        case "openthepodbaydoors" || "open the pod bay doors":
+        case "openthepodbaydoors":
           setHistory([
             ...history,
             <div
