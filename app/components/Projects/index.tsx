@@ -267,7 +267,7 @@ export const extremeNetworksAPIJSONParser: IProject = {
 };
 
 export const asteroidBlasterGame: IProject = {
-  name: "Asteroid Blaster Game",
+  name: "2D Space Shooter Game",
   link: null,
   type: "Personal",
   status: "WIP",
