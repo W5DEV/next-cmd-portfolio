@@ -315,7 +315,7 @@ export default function Home() {
             </div>,
           ]);
           setTimeout(function () {
-            window.open("https://greatidea.dev/contact", "_blank");
+            window.open("https://contact.greatidea.dev/", "_blank");
           }, 1000);
           break;
 
