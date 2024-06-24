@@ -9,6 +9,18 @@ export interface IProject {
   primaryTech: string;
 }
 
+export const legendsAndLegacies: IProject = {
+  name: "Legends and Legacies",
+  link: "https://github.com/W5DEV/python-legends-and-legacies",
+  type: "Personal",
+  status: "In Progress",
+  description:
+    "Legends and Legacies is a text-based RPG game that I am builidng based on the rules and mechanics of Dungeons and Dragons. It is currently a work in progress and I am in the rules and mechanics phase of development.",
+  github: "https://github.com/W5DEV/python-legends-and-legacies",
+  tech: ["Python"],
+  primaryTech: "Python",
+};
+
 export const electricWorksInc: IProject = {
   name: "Electric Works Inc",
   link: "https://ew.liquidcreative.net/",
