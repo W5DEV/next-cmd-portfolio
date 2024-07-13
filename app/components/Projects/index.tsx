@@ -9,6 +9,18 @@ export interface IProject {
   primaryTech: string;
 }
 
+export const rpgManager: IProject = {
+  name: "RPG Manager",
+  link: "https://github.com/W5DEV/python-rpg-manager",
+  type: "Personal",
+  status: "In Progress",
+  description:
+    "The idea to create an RPG Manger stemmed from my active work in my Legends & Legacies project. I decided that a more urgent need within the RPG community was a utility that facilitated creating characters and managing campaigns. I am currenly working thorugh laying out the UI and solidifying the core mechanics of the application. My goal is to eventually make a system for syncing player data so DMs can easily keep track of player stats as well as their own campaign data.",
+  github: "https://github.com/W5DEV/python-rpg-manager",
+  tech: ["Python"],
+  primaryTech: "Python",
+};
+
 export const legendsAndLegacies: IProject = {
   name: "Legends and Legacies",
   link: "https://github.com/W5DEV/python-legends-and-legacies",

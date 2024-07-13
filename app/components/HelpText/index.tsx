@@ -6,7 +6,8 @@ export default function HelpText() {
         target="_blank"
         className="text-pink-500 italic text-xs hover:underline"
       >
-        To reach out regarding &apos;Legends and Legacies&apos;, click here.
+        To reach out regarding &apos;Legends and Legacies&apos; or my RPG
+        Manager, click here.
       </a>
 
       <span className="text-yellow-600">
