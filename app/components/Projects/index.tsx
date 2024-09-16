@@ -9,6 +9,18 @@ export interface IProject {
   primaryTech: string;
 }
 
+export const triviaHQ: IProject = {
+  name: "Trivia HQ",
+  link: "https://trivia-hq.com/",
+  type: "Personal",
+  status: "In Progress",
+  description:
+    "Trivia HQ is primarily an API service which serves over 45,000 trivia questions via various endpoints. They can be categorized based on topic or simply randomized completely for a more challenging experience. The API is built with Go and PostgreSQL, and the demo frontend is made using Svelte, which showcases a great usecase for retrieving topical questions. My hope is to test this API and generate more feedback, then eventually migrate the backend to a cloud service and make it publicly available with free and paid tiers.",
+  github: "https://github.com/W5DEV/go-trivia-hq-api",
+  tech: ["Go, PostgreSQL, Svelte"],
+  primaryTech: "Go",
+};
+
 export const rpgManager: IProject = {
   name: "RPG Manager",
   link: "https://github.com/W5DEV/python-rpg-manager",
